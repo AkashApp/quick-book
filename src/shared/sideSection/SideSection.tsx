@@ -111,7 +111,7 @@ const SideSection = () => {
         <Button variant={"secondary"}>Add Comment</Button>
       </div>
 
-      <Button className="bg-[#603AE5] w-full">Add Comment</Button>
+      <Button className="bg-[#603AE5] w-full">View Line Items</Button>
 
       <div className="w-full pr-12 pl-12 mt-6 pb-4 border-b-1">
         <Carousel className="w-full">
