@@ -18,7 +18,7 @@ function App() {
         </div>
       </div>
       <SideSection/>
-      <div className='size-14 bg-[#9C85ED] text-white flex justify-center items-center rounded-2xl fixed bottom-8 right-8'><MessagesSquare /></div>
+      <div className='size-14 bg-[#9C85ED] text-white flex justify-center items-center rounded-2xl fixed bottom-8 right-8 hover:bg-[#603AE5] hover:opacity-90'><MessagesSquare /></div>
     </div>
   )
 }
