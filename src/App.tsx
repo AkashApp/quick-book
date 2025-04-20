@@ -12,8 +12,8 @@ function App() {
       <Sidebar/>
       <div className='w-3/4 flex flex-col'>
         <NavigationWeb/>
-        {/* mt-26 */}
-        <div className='mt-4 pl-4 pr-4'>
+        {/* mt-4 */}
+        <div className='pl-4 pr-4 mt-26'>
           <Accounting/>
         </div>
       </div>

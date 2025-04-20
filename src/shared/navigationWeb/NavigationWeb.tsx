@@ -5,7 +5,7 @@ import { Search, Bell, Settings, UserRound, ChevronDown } from "lucide-react";
 const NavigationWeb = () => {
   return (
     // fixed top-0 left-[5.25rem]
-    <div className="min-w-3/4 h-21 flex items-center justify-between pl-2 pr-2 bg-white">
+    <div className="min-w-3/4 h-21 flex items-center justify-between pl-2 pr-2 bg-white fixed top-0 left-[5.25rem]">
       <div className="flex items-center gap-1">
         <p className="text-[16px] weight-700">Review</p>
         <ComboboxDemo />

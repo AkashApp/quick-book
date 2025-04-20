@@ -14,7 +14,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
+// import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -24,7 +24,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CloudUpload } from "lucide-react";
+import { CloudUpload, Copy } from "lucide-react";
 
 const Accounting = () => {
   const bills = [
@@ -98,7 +98,7 @@ const Accounting = () => {
           <DialogContent className="sm:max-w-[645px]">
             <DialogHeader>
               <DialogTitle>
-                <div className="flex justify-between w-full">
+                <div className="flex justify-between w-11/12">
                   <Button variant={"ghost"} className="text-muted-foreground">
                     EasyUpload
                   </Button>
@@ -118,26 +118,28 @@ const Accounting = () => {
                   <div className="w-1/2 border-b-1">
                     <div className="grid w-full items-center gap-3 mt-4">
                       <Label htmlFor="bill">Document Owner</Label>
-                      <p id="bill" className="font-bold text-black">Accountant 01</p>
+                      <p id="bill" className="font-bold text-black">
+                        Accountant 01
+                      </p>
                     </div>
                   </div>
                   <div className="w-1/2 border-b-1">
                     <div className="mt-4">
                       <Label className="mb-1.5" htmlFor="date">
-                        Currency
+                        Client
                       </Label>
                       <Select>
                         <SelectTrigger className="w-full border-none">
-                          <SelectValue placeholder="Select Currency" />
+                          <SelectValue placeholder="Select Client" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectGroup>
-                            <SelectLabel>Currency</SelectLabel>
-                            <SelectItem value="doller">Doller</SelectItem>
-                            <SelectItem value="yen">Yen</SelectItem>
-                            <SelectItem value="inr">INR</SelectItem>
-                            <SelectItem value="eus">EUS</SelectItem>
-                            <SelectItem value="dinnar">Dinnar</SelectItem>
+                            <SelectLabel>Client</SelectLabel>
+                            <SelectItem value="client1">Client 1</SelectItem>
+                            <SelectItem value="client2">Client 2</SelectItem>
+                            <SelectItem value="client3">Client 3</SelectItem>
+                            <SelectItem value="client4">Client 4</SelectItem>
+                            <SelectItem value="client5">Client 5</SelectItem>
                           </SelectGroup>
                         </SelectContent>
                       </Select>
@@ -147,8 +149,8 @@ const Accounting = () => {
               </DialogDescription>
             </DialogHeader>
             <div className="flex flex-col justify-center items-center gap-4">
-              <div className="z-10 w-full flex justify-center items-center gap-4 border-dashed border-1 p-4 rounded-2xl cursor-pointer">
-                <Input className="-z-10 w-5/6 h-18 fixed" id="picture" type="file" placeholder=""/>
+              <div className="w-full flex justify-center items-center gap-4 border-dashed border-1 p-4 rounded-2xl cursor-pointer">
+                {/* <Input className="-z-10 w-5/6 h-18 fixed" id="picture" type="file" placeholder=""/> */}
                 <div className="w-18 h-18 bg-[#603AE51A] rounded-2xl flex justify-center items-center text-[#603AE5]">
                   <CloudUpload />
                 </div>
@@ -156,14 +158,32 @@ const Accounting = () => {
                   <p className="text-center text-[12px] text-[#603AE5] font-bold">
                     Drag & Drop or Choose file to upload
                   </p>
-                  <p className="text-center text-[12px] text-[#603AE5]">JPG, PNG, PDF, CSV</p>
+                  <p className="text-center text-[12px] text-[#603AE5]">
+                    JPG, PNG, PDF, CSV
+                  </p>
                 </div>
               </div>
-              <Button className="w-1/3 bg-[#603AE5] hover:bg-[#603AE5] hover:opacity-90">Add Receipt</Button>
+              <Button
+                type="submit"
+                className="w-1/3 bg-[#603AE5] hover:bg-[#603AE5] hover:opacity-90 p-6 mt-4"
+              >
+                Add Receipt
+              </Button>
             </div>
-            <DialogFooter>
-              <Button type="submit">Save changes</Button>
-            </DialogFooter>
+            <div className="flex flex-col justify-start gap-2 mb-12 mt-4 text-[14px]">
+              <p className="text-muted-foreground">Send Over Email</p>
+              <div className="flex font-bold gap-2">
+                <p>Single :</p>
+                <p className="text-[#603AE5]">abc.single@gmail.com</p>
+                <Copy />
+              </div>
+              <div className="flex font-bold gap-2">
+                <p>Multiple :</p>
+                <p className="text-[#603AE5]">abc.multiple@gmail.com</p>
+                <Copy />
+              </div>
+            </div>
+            <DialogFooter></DialogFooter>
           </DialogContent>
         </Dialog>
       </div>
